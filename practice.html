@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice Challenges</title>
+    <meta charset="utf-8" />
+    <script src="jquery-3.4.1.js"></script>
+    <script src="practScript.js"></script>
+    <style>
+        .link {
+            color: #F60;
+        }
+
+        .textHolder {
+            background-color: #EEF;
+        }
+
+        .external {
+            text-decoration: overline;
+            color: #A0A;
+        }
+
+        #parenting * {
+            padding: 1em;
+        }
+
+        p {
+            border: solid 2px #30F;
+        }
+
+            p.para {
+                font-weight: bold;
+            }
+
+        span {
+            border: solid 2px #0A0;
+        }
+
+        #parenting div {
+            border: solid 2px #F60;
+        }
+        li{border: 2px solid #3A3;}
+    </style>
+</head>
+<body>
+    <h1>
+        Practice Challenges for the exam.
+    </h1>
+    <section>
+        <pre>
+                This page contains the HTML and links to a JavaScript file with
+                a bunch of jQuery code. You will need to get a
+                jQuery library and include it to see the jQuery scripts work.
+            
+                To practice for the test, rewrite all of the jQuery code using
+                native JavaScript. This means no jQuery calls or other libraries.
+                
+                It might be a good idea to create a copy of this file for your testing 
+                that does not link to a jQuery library. This way you can see if the 
+                behavior is the same.
+                
+                Yes, these are harder than the test will be but do not ignore 
+                them because they will prepare you for the exam.
+
+                Make sure for the exam you also understand bubbling and canceling of
+                bubbled events. Remember anything that was on the Midterm is fair game.
+                
+                Here is an example of Code:
+                function aaa(){
+                    doThis();
+                }
+            
+        </pre>
+        <button id="btnMore">Button More - Do this</button>
+    </section>
+    <button id="btnAny">Clicking me is an option.</button>
+    <p>
+        This is a bunch of links:
+        <a class="link" href="practice.html#btnAny">One</a>
+        <a class="link external" href="http://bing.com">Two</a>
+        <a class="link" href="#myHolder">Three</a>
+        <a class="link external" href="http://google.com">Four</a>
+        <a class="link" href="practice.html">Five</a>
+    </p>
+    <button onclick="clearLinks()">Remove Link Classes</button>
+
+    <section id="myHolder"></section>
+    <button onclick="addList()">Add List</button>
+    <button onclick="changeListText()">Change List Item</button>
+
+    <p id="myParagraph">My text can move.</p>
+    <p></p>
+    <button onclick="moveText()">Move Text</button>
+
+    <p class="para   textHolder">Change My text</p>
+    <p class="para">Change my Text too</p>
+    <button onclick="changeClasses()">Change Classes</button>
+
+    
+
+
+    <section id="parenting">
+        <div>
+            <p>
+                <span id="spnClick">I can be clicked!</span>
+                <span>But not me.</span>
+                <span>Or me.</span>
+            </p>
+        </div>
+    </section>
+
+    <p id="someText">
+        <span>This is a sentence.</span>
+        <span>And another one.</span>
+        <span>Even more sentences.</span>
+        <span>Isn't this grand?</span>
+    </p>
+    <button onclick="changeSpans()">Add to Spans</button>
+
+
+    <div style="border: 2px solid #00D;" id="magicBubbling" onclick="handleHere()">
+        <ul style="border: 2px solid #F00;">
+            <li>Apple</li>
+            <li>Fred</li>
+        </ul>
+    </div>
+
+
+
+</body>
+</html>
